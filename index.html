@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabalho de Programação · Física e Tecnociência</title>
+  <meta name="description" content="Uma introdução elegante e interativa ao JavaScript, com exemplos que você executa direto na página." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23E8B84B'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='bold' text-anchor='middle' fill='%230C0F14'%3EJS%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <nav class="nav">
+      <a class="marca" href="#">
+        <span class="marca-js">JS</span>
+        <span class="marca-nome">Trabalho de Programação · Física e Tecnociência</span>
+      </a>
+      <div class="nav-links">
+        <a href="#introducao">Introdução</a>
+        <a href="#exemplos">Exemplos</a>
+        <a href="#playground">Playground</a>
+        <a href="#atividades">Atividades</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero">
+      <div class="hero-texto">
+        <p class="eyebrow">Trabalho de Programação</p>
+        <h1>A linguagem que dá <em>vida</em> à web.</h1>
+        <p class="lead">
+          O JavaScript transforma páginas estáticas em experiências interativas.
+          Nesta página, cada conceito vem com código real — aperte
+          <strong>▶ Executar</strong> e veja o resultado na hora.
+        </p>
+        <div class="hero-acoes">
+          <a class="botao botao-primario" href="#exemplos">Ver os exemplos</a>
+          <a class="botao botao-fantasma" href="#playground">Abrir o playground</a>
+        </div>
+      </div>
+
+      <div class="editor hero-editor" aria-label="Demonstração de código">
+        <div class="editor-barra">
+          <span class="ponto ponto-r"></span>
+          <span class="ponto ponto-a"></span>
+          <span class="ponto ponto-v"></span>
+          <span class="editor-arquivo">ola-mundo.js</span>
+        </div>
+        <pre class="editor-corpo"><code id="hero-codigo"></code><span class="cursor" id="hero-cursor"></span></pre>
+        <div class="editor-saida" id="hero-saida" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ INTRODUÇÃO ══════════ -->
+    <section id="introducao" class="secao">
+      <div class="secao-cabeca">
+        <p class="eyebrow">Introdução</p>
+        <h2>O que é JavaScript?</h2>
+      </div>
+      <div class="intro-grade">
+        <div class="intro-prosa">
+          <p>
+            Criado em <strong>1995</strong> por Brendan Eich em apenas dez dias, o JavaScript
+            nasceu para dar interatividade ao navegador — e hoje é uma das linguagens mais
+            usadas do planeta. Junto com o <strong>HTML</strong> (a estrutura) e o
+            <strong>CSS</strong> (o estilo), ele forma o terceiro pilar da web:
+            o <strong>comportamento</strong>.
+          </p>
+          <p>
+            Com JavaScript, uma página reage a cliques, valida formulários, busca dados,
+            anima elementos e muito mais. E ele saiu do navegador: com o Node.js roda em
+            servidores, aplicativos e até robôs. Tudo o que você vê funcionando nesta
+            página — inclusive os botões de executar — é JavaScript puro.
+          </p>
+        </div>
+        <div class="intro-fatos">
+          <div class="fato">
+            <span class="fato-numero">1995</span>
+            <span class="fato-rotulo">ano de criação, na Netscape</span>
+          </div>
+          <div class="fato">
+            <span class="fato-numero">~98%</span>
+            <span class="fato-rotulo">dos sites do mundo usam JavaScript</span>
+          </div>
+          <div class="fato">
+            <span class="fato-numero">3º pilar</span>
+            <span class="fato-rotulo">da web, ao lado de HTML e CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ EXEMPLOS ══════════ -->
+    <section id="exemplos" class="secao">
+      <div class="secao-cabeca">
+        <p class="eyebrow">Trilha de aprendizado</p>
+        <h2>Três níveis, do primeiro título ao movimento</h2>
+        <p class="secao-sub">
+          A trilha sobe degrau por degrau: primeiro a estrutura e o visual,
+          depois a lógica e, por fim, os recursos mais novos da web.
+          Todo código abaixo é executado de verdade pelo seu navegador.
+        </p>
+        <nav id="niveis-chips" class="chips" aria-label="Atalhos para os níveis"><!-- preenchido por script.js --></nav>
+      </div>
+      <div id="niveis"><!-- preenchido por script.js --></div>
+    </section>
+
+    <!-- ══════════ PLAYGROUND ══════════ -->
+    <section id="playground" class="secao">
+      <div class="secao-cabeca">
+        <p class="eyebrow">Sua vez</p>
+        <h2>Playground</h2>
+        <p class="secao-sub">
+          Escreva qualquer código JavaScript e execute — ou use o botão
+          <strong>Copiar</strong> de um exemplo acima e cole aqui para modificá-lo.
+          Use <code>console.log()</code> para imprimir no console e a variável
+          <code>palco</code> para mexer na página.
+        </p>
+      </div>
+
+      <div class="exemplo playground-card">
+        <div class="ex-corpo">
+          <div class="ex-codigo">
+            <div class="ex-toolbar">
+              <span class="ex-arquivo">meu-codigo.js</span>
+              <div class="ex-botoes">
+                <button class="botao botao-mini" id="pg-limpar" type="button">Limpar</button>
+                <button class="botao botao-executar" id="pg-executar" type="button">▶ Executar</button>
+              </div>
+            </div>
+            <textarea id="pg-editor" spellcheck="false" aria-label="Editor de código"></textarea>
+          </div>
+          <div class="ex-saida">
+            <div class="saida-rotulo">Console</div>
+            <div class="console" id="pg-console" aria-live="polite"></div>
+            <div class="palco" id="pg-palco"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ATIVIDADES (autoria) ══════════ -->
+    <section id="atividades" class="secao">
+      <div class="secao-cabeca">
+        <p class="eyebrow">Autoria</p>
+        <h2>Nossas atividades</h2>
+        <p class="secao-sub">
+          Registro do que aprendemos na aula de programação — as anotações, os
+          testes de código e a construção desta página. Clique em uma foto para
+          ampliar.
+        </p>
+      </div>
+
+      <div class="galeria-barra">
+        <input type="file" id="entrada-foto" accept="image/*" multiple hidden />
+        <button class="botao botao-primario" id="botao-adicionar-foto" type="button">
+          ＋ Adicionar fotos
+        </button>
+        <button class="botao botao-fantasma" id="botao-alternar-fotos" type="button">
+          Tirar imagens do site
+        </button>
+        <p class="galeria-nota">
+          As fotos adicionadas aqui ficam guardadas <strong>neste navegador</strong>.
+          Para que apareçam para todo mundo, use <em>Salvar arquivo</em> e coloque a
+          imagem na pasta <code>imagens/</code> do trabalho.
+        </p>
+      </div>
+      <p id="galeria-recado" class="galeria-recado" aria-live="polite"></p>
+
+      <div id="galeria" class="galeria"><!-- preenchido por script.js --></div>
+    </section>
+
+  </main>
+
+  <!-- Visualizador de fotos ampliadas -->
+  <div class="lupa" id="lupa" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button class="lupa-fechar" id="lupa-fechar" type="button" aria-label="Fechar">✕</button>
+    <figure class="lupa-quadro">
+      <img id="lupa-img" alt="" />
+      <figcaption id="lupa-legenda"></figcaption>
+    </figure>
+  </div>
+
+  <footer class="rodape">
+    <p>
+      Feito com HTML, CSS e <span class="dourado">JavaScript puro</span> — sem bibliotecas.
+    </p>
+    <p class="rodape-credito">Trabalho de Programação · Esther · <span id="ano"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
