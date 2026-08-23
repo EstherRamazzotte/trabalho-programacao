@@ -464,63 +464,6 @@ function quadro(agora) {
 requestAnimationFrame(quadro);
 console.log("Voando por 6 segundos...");`,
   },
-  {
-    tipo: "html",
-    titulo: "Animação guiada pela rolagem",
-    arquivo: "scroll.html",
-    descricao:
-      "Um dos recursos mais novos do CSS: com animation-timeline a animação não é comandada pelo relógio, e sim pela rolagem. Para ver o movimento, role a lista DENTRO do quadro ao lado — cada cartão entra quando aparece na tela. Em navegadores sem o recurso, o @supports aciona um plano B: os cartões entram sozinhos, um por um.",
-    codigo: `<style>
-  body { font-family: system-ui, sans-serif; }
-
-  @keyframes entrar {
-    from { opacity: 0; transform: translateY(60px) scale(0.85); }
-    to   { opacity: 1; transform: translateY(0)    scale(1);    }
-  }
-
-  .cartao {
-    margin: 90px 10px;
-    padding: 28px;
-    border-radius: 12px;
-    background: #1f6feb;
-    color: white;
-
-    /* plano B: entrada normal, para qualquer navegador */
-    animation: entrar 0.9s ease both;
-  }
-
-  .cartao:nth-of-type(even) { background: #2f6f4f; }
-
-  /* navegadores novos: a ROLAGEM comanda a animação */
-  @supports (animation-timeline: view()) {
-    .cartao {
-      animation: entrar linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 45%;
-    }
-  }
-
-  /* sem o recurso novo, os cartões entram em fila */
-  @supports not (animation-timeline: view()) {
-    .cartao:nth-of-type(2) { animation-delay: 0.3s; }
-    .cartao:nth-of-type(3) { animation-delay: 0.6s; }
-    .cartao:nth-of-type(4) { animation-delay: 0.9s; }
-    .cartao:nth-of-type(5) { animation-delay: 1.2s; }
-    .cartao:nth-of-type(6) { animation-delay: 1.5s; }
-  }
-</style>
-
-<p>↓ role aqui dentro para ver os cartões entrarem ↓</p>
-
-<div class="cartao">Cartão 1</div>
-<div class="cartao">Cartão 2</div>
-<div class="cartao">Cartão 3</div>
-<div class="cartao">Cartão 4</div>
-<div class="cartao">Cartão 5</div>
-<div class="cartao">Cartão 6</div>
-
-<p>fim — role de volta para cima 🙂</p>`,
-  },
 ];
 
 /* Os três níveis, na ordem em que aparecem na página */
@@ -550,7 +493,7 @@ const NIVEIS = [
     nome: "Avançado",
     resumo: "Movimento e recursos modernos",
     descricao:
-      "Os recursos mais recentes da web, todos ligados a movimento: transições, @keyframes, a Web Animations API, requestAnimationFrame e animações guiadas pela rolagem.",
+      "Os recursos mais recentes da web, todos ligados a movimento: transições, @keyframes, a Web Animations API e o requestAnimationFrame, o mesmo usado em jogos.",
     exemplos: NIVEL_AVANCADO,
   },
 ];
