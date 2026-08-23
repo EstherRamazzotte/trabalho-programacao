@@ -914,25 +914,25 @@ if (prefereMenosMovimento) {
 
 const ATIVIDADES = [
   {
-    arquivo: "imagens/atividade-1.jpg",
+    arquivo: "imagens/atividade-1.jpg?v=2",
     titulo: "O laboratório de informática",
     legenda:
       "Onde tudo acontece: as aulas de programação no laboratório da escola, cada um no seu computador.",
   },
   {
-    arquivo: "imagens/atividade-2.jpg",
+    arquivo: "imagens/atividade-2.jpg?v=2",
     titulo: "Programando no VS Code",
     legenda:
       "O Visual Studio Code aberto no navegador, pronto para escrever o HTML, o CSS e o JavaScript das aulas.",
   },
   {
-    arquivo: "imagens/atividade-3.jpg",
+    arquivo: "imagens/atividade-3.jpg?v=2",
     titulo: "Nosso perfil no GitHub",
     legenda:
       "A conta da Esther no GitHub, com os projetos das aulas já publicados — do primeiro site ao projeto final.",
   },
   {
-    arquivo: "imagens/atividade-4.jpg",
+    arquivo: "imagens/atividade-4.jpg?v=2",
     titulo: "Código publicado",
     legenda:
       "O HTML do projeto do currículo, direto no GitHub: estrutura, listas, links e imagens escritos em aula.",
