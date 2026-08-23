@@ -915,23 +915,27 @@ if (prefereMenosMovimento) {
 const ATIVIDADES = [
   {
     arquivo: "imagens/atividade-1.jpg",
-    titulo: "Aula de introdução",
-    legenda: "Primeiros conceitos de HTML anotados no caderno.",
+    titulo: "O laboratório de informática",
+    legenda:
+      "Onde tudo acontece: as aulas de programação no laboratório da escola, cada um no seu computador.",
   },
   {
     arquivo: "imagens/atividade-2.jpg",
-    titulo: "Estilo com CSS",
-    legenda: "Deixando a página com a nossa cara, cor por cor.",
+    titulo: "Programando no VS Code",
+    legenda:
+      "O Visual Studio Code aberto no navegador, pronto para escrever o HTML, o CSS e o JavaScript das aulas.",
   },
   {
     arquivo: "imagens/atividade-3.jpg",
-    titulo: "Testando o JavaScript",
-    legenda: "Rodando os exemplos no navegador e conferindo o console.",
+    titulo: "Nosso perfil no GitHub",
+    legenda:
+      "A conta da Esther no GitHub, com os projetos das aulas já publicados — do primeiro site ao projeto final.",
   },
   {
     arquivo: "imagens/atividade-4.jpg",
-    titulo: "Resultado final",
-    legenda: "A página pronta, com todos os exemplos funcionando.",
+    titulo: "Código publicado",
+    legenda:
+      "O HTML do projeto do currículo, direto no GitHub: estrutura, listas, links e imagens escritos em aula.",
   },
 ];
 
