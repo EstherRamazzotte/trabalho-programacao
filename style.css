@@ -854,6 +854,105 @@ a { color: inherit; }
 
 .lupa-fechar:hover { border-color: var(--ouro); color: var(--ouro); }
 
+/* ── Nossa escola ──────────────────────────────────────── */
+
+.escola-grade {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.escola-prosa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 38rem;
+}
+
+.escola-prosa strong { color: var(--ouro); font-weight: 600; }
+
+.escola-foto {
+  margin: 0;
+  background: var(--bg1);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.escola-foto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.escola-foto figcaption {
+  padding: 0.9rem 1.1rem;
+  color: var(--mudo);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--linha);
+}
+
+/* Enquanto a foto da escola não estiver na pasta imagens/ */
+.escola-sem-foto img { display: none; }
+
+.escola-sem-foto::before {
+  content: "foto da escola a incluir — salve como imagens/escola.jpg";
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px dashed var(--linha);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mudo);
+}
+
+.escola-sem-foto figcaption { border-top: none; }
+
+/* Linha do tempo da escola */
+
+.marcos {
+  list-style: none;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.marco {
+  background: var(--bg1);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.marco-ano {
+  font-family: var(--fonte-display);
+  font-size: 1.6rem;
+  font-weight: 560;
+  color: var(--ouro);
+  font-variant-numeric: tabular-nums;
+}
+
+.marco-texto {
+  color: var(--mudo);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .escola-grade { grid-template-columns: 1fr; gap: 2rem; }
+  .marcos { grid-template-columns: 1fr 1fr; }
+}
+
 /* ── Rodapé ────────────────────────────────────────────── */
 
 .rodape {

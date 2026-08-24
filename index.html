@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -19,6 +19,7 @@
         <span class="marca-nome">Trabalho de Programação · Física e Tecnociência</span>
       </a>
       <div class="nav-links">
+        <a href="#escola">Escola</a>
         <a href="#introducao">Introdução</a>
         <a href="#exemplos">Exemplos</a>
         <a href="#playground">Playground</a>
@@ -57,6 +58,62 @@
         <pre class="editor-corpo"><code id="hero-codigo"></code><span class="cursor" id="hero-cursor"></span></pre>
         <div class="editor-saida" id="hero-saida" aria-live="polite"></div>
       </div>
+    </section>
+
+    <!-- ══════════ NOSSA ESCOLA ══════════ -->
+    <section id="escola" class="secao">
+      <div class="secao-cabeca">
+        <p class="eyebrow">Nossa escola</p>
+        <h2>Colégio Estadual Antônio Garcez Novaes</h2>
+      </div>
+
+      <div class="escola-grade">
+        <div class="escola-prosa">
+          <p>
+            Este trabalho nasceu nas salas do <strong>Colégio Estadual Antônio
+            Garcez Novaes</strong>, em Arapongas, no norte do Paraná. A escola
+            começou como <strong>Ginásio Comercial Estadual</strong>, autorizada a
+            funcionar pelo Decreto nº 7.602, de 16 de novembro de
+            <strong>1967</strong> — desde o início, formar para o trabalho fez
+            parte da sua vocação.
+          </p>
+          <p>
+            Em 3 de outubro de <strong>1969</strong>, o Decreto nº 16.684 deu à
+            escola o nome do patrono, Antônio Garcez Novaes; em
+            <strong>1998</strong> ela recebeu a denominação atual de Colégio
+            Estadual, e hoje oferece Ensino Fundamental, Médio e Profissional.
+            São quase <strong>seis décadas</strong> formando araponguenses — e as
+            aulas de programação desta página fazem parte dessa história: a mesma
+            escola que nasceu ensinando comércio agora ensina a linguagem dos
+            computadores.
+          </p>
+        </div>
+
+        <figure class="escola-foto" id="quadro-foto-escola">
+          <img id="foto-escola" src="imagens/escola.jpg?v=1"
+               alt="Fachada do Colégio Estadual Antônio Garcez Novaes" loading="lazy" />
+          <figcaption>Colégio Estadual Antônio Garcez Novaes · Arapongas, PR</figcaption>
+        </figure>
+      </div>
+
+      <ol class="marcos">
+        <li class="marco">
+          <span class="marco-ano">1967</span>
+          <span class="marco-texto">nasce como Ginásio Comercial Estadual, pelo Decreto nº 7.602</span>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">1969</span>
+          <span class="marco-texto">recebe o nome do patrono, Antônio Garcez Novaes</span>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">1998</span>
+          <span class="marco-texto">passa a Colégio Estadual, com Ensino Fundamental e Médio</span>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">2017</span>
+          <span class="marco-texto">Jubileu de Ouro: 50 anos de história em Arapongas</span>
+        </li>
+      </ol>
     </section>
 
     <!-- ══════════ INTRODUÇÃO ══════════ -->
@@ -196,6 +253,6 @@
     <p class="rodape-credito">Trabalho de Programação · Esther · <span id="ano"></span></p>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

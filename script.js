@@ -1167,6 +1167,17 @@ document.addEventListener("keydown", (evento) => {
   if (evento.key === "Escape" && !lupa.hidden) fecharLupa();
 });
 
-/* ── 8. Ano do rodapé ──────────────────────────────────── */
+/* ── 8. Foto da escola: mostra o aviso enquanto não existir ── */
+
+const fotoEscola = document.getElementById("foto-escola");
+if (fotoEscola) {
+  const marcarSemFoto = () =>
+    document.getElementById("quadro-foto-escola").classList.add("escola-sem-foto");
+  fotoEscola.addEventListener("error", marcarSemFoto);
+  // se a imagem já falhou antes de o script rodar, o evento não vem de novo
+  if (fotoEscola.complete && fotoEscola.naturalWidth === 0) marcarSemFoto();
+}
+
+/* ── 9. Ano do rodapé ──────────────────────────────────── */
 
 document.getElementById("ano").textContent = new Date().getFullYear();
